@@ -1,15 +1,6 @@
-<!doctype html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
-</head>
-
-<body>
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,68 +8,71 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class=" from-yellow-50 to-gray-100 font-sans pt-3">
-<img src="" alt="">
+<body class="from-yellow-50 to-gray-100 font-sans">
   <!-- NAVBAR -->
-  <header class="bg-[#050606] text-white rounded-2xl shadow-lg mx-6 fixed top-2 left-0 right-0 z-50">
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-2">
 
-    <!-- Logo -->
-    <div class="flex items-center gap-2">
-      <img src="KLINK.jpeg" alt="logo" class="h-14 ml-7">
+  <header class="bg-[#050606] text-white shadow-lg fixed top-2 left-0 right-0 z-50 rounded-3xl mx-2">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-2">
+
+      <!-- Logo -->
+      <div class="flex">
+        <img src="KLINK.jpeg" alt="logo" class="h-14">
+      </div>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex gap-10 text-sm">
+        <a href="#Accueil" class="hover:text-blue-700">Accueil</a>
+        <a href="#offres" class="hover:text-blue-700">Nos offres</a>
+        <a href="apropos.html" class="hover:text-blue-700">À Propos</a>
+        <a href="#contact" class="hover:text-blue-700">Contact</a>
+      </nav>
+
+      <!-- Button Desktop -->
+      <div class="hidden md:flex gap-3">
+        <a href="produits.html">
+          <button class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+            COMMANDER
+          </button>
+        </a>
+      </div>
+
+      <!-- Mobile Container (Hamburger + Menu) -->
+      <div class="md:hidden flex items-center gap-2">
+        <!-- Menu Mobile (Horizontal) -->
+        <div id="mobile-menu" class="hidden text-xs font-bold gap-20">
+          <a href="#Accueil" class="hover:text-blue-700">Accueil</a>
+          <a href="#offres" class="hover:text-blue-700">Nos offres</a>
+          <a href="apropos.html" class="hover:text-blue-700">À Propos</a>
+          <a href="#contact" class="hover:text-blue-700">Contact</a>
+          <a href="produits.html">
+            <button class=" hidden bg-blue-600 text-white py-1 px-3 rounded-full text-xs font-semibold">
+              COMMANDER
+            </button>
+          </a>
+        </div>
+
+        <!-- Hamburger -->
+        <div id="menu-btn" class="text-2xl cursor-pointer hover:text-blue-700">
+          ☰
+        </div>
+      </div>
+
     </div>
+  </header>
 
-    <!-- Menu Desktop -->
-    <nav class="hidden md:flex gap-8 text-sm">
-      <a href="#Accueil" class="hover:text-blue-700">Accueil</a>
-      <a href="#offres" class="hover:text-blue-700">Nos offres</a>
-      <a href="apropos.html" class="hover:text-blue-700">À Propos</a>
-      <a href="#contact" class="hover:text-blue-700">Contact</a>
-    </nav>
+  <!-- Script -->
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
 
-    <!-- Button Desktop -->
-    <div class="hidden md:flex gap-3">
-      <a href="produits.html">
-        <button class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-          COMMANDER
-        </button>
-      </a>
-    </div>
-
-    <!-- Hamburger -->
-    <div id="menu-btn" class="md:hidden text-2xl cursor-pointer">
-      ☰
-    </div>
-
-  </div>
-</header>
-
-<!-- Menu Mobile -->
-<div id="mobile-menu" class="hidden bg-[#050606] text-white mx-6 mt-20 rounded-2xl shadow-lg px-6 py-4 space-y-4 md:hidden">
-  <a href="#Accueil" class="block hover:text-blue-700">Accueil</a>
-  <a href="#offres" class="block hover:text-blue-700">Nos offres</a>
-  <a href="apropos.html" class="block hover:text-blue-700">À Propos</a>
-  <a href="#contact" class="block hover:text-blue-700">Contact</a>
-
-  <a href="produits.html">
-    <button class="w-full bg-blue-600 text-white py-2 rounded-full font-semibold">
-      COMMANDER
-    </button>
-  </a>
-</div>
-
-<!-- Script -->
-<script>
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("mobile-menu");
-
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-</script>
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
 
   <!-- HERO SECTION -->
-  <section id="Accueil" class="max-w-7xl mx-auto px-6 py-12 mt-10 md:py-20 flex flex-col-reverse md:flex-row items-center justify-center text-center gap-10">
+  <section id="Accueil"
+    class="  max-w-7xl mx-auto px-6 py-12 mt-32 md:mt-20 md:py-20 flex flex-col-reverse md:flex-row items-center justify-center text-center gap-10">
 
     <!-- LEFT CONTENT -->
     <div class="flex-1 text-center md:text-left">
@@ -93,7 +87,8 @@
       </p>
 
       <p class="text-gray-900 mb-6">
-        Nous créons des solutions digitales intelligentes pour partager vos informations, protéger vos objets et connecter votre monde en toute simplicité
+        Nous créons des solutions digitales intelligentes pour partager vos informations, protéger vos objets et
+        connecter votre monde en toute simplicité
         <br>
         Plus rapide. Plus durable. Plus marquante.
       </p>
@@ -104,345 +99,347 @@
 
       <!-- CTA -->
       <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-       <a href="produits.html"><button class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition shadow-lg transform hover:shadow-2xl">
+        <a href="produits.html"><button
+            class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition shadow-lg transform hover:shadow-2xl">
             COMMANDER MA K LINK
           </button></a>
-          
-<a href="apropos.html"><button class="border border-gray-400 px-6 py-3 rounded-full hover:bg-gray-200 transition">
-          EN SAVOIR PLUS
-        </button></a>
-        
+
+        <a href="apropos.html"><button
+            class="border border-gray-400 px-6 py-3 rounded-full hover:bg-gray-200 transition">
+            EN SAVOIR PLUS
+          </button></a>
+
       </div>
     </div>
-
 
     <!-- RIGHT IMAGE -->
-   <div class="flex-1 flex justify-center">
-      <img 
-        src="card.jpg"
-        alt="card"
-        class="rounded-3xl shadow-xl w-[210px] md:w-[400px] mt-10"
-      >
+    <div class="flex-1  flex justify-center">
+      <img src="card.jpg" alt="card" class="rounded-3xl shadow-xl md:w-400px ">
     </div>
- 
+
   </section>
 
-<!-- SECTION -->
-<section class="max-w-7xl mx-auto px-6 py-12 md:py-20 items-center overflow-hidden">
+  <!-- SECTION -->
+  <section class="max-w-7xl mx-auto px-6 py-12 md:py-20 items-center overflow-hidden">
 
-  <p class="flex justify-center items-center font-bold text-3xl text-blue-700">
-    ils nous font confiance
-  </p>
+    <p class="flex justify-center items-center font-bold text-3xl text-blue-700">
+      ils nous font confiance
+    </p>
 
-  <!-- CONTAINER ANIMATION -->
-  <div class="mt-10 overflow-hidden">
-    
-    <div class="flex gap-10 animate-scroll w-max hover:[animation-play-state:paused]">
-      
-      <!-- LOGOS -->
-      <img class="h-12" src="logopharmacie.jpeg" alt="">
-      <img class="h-12" src="logo orbit.jpeg" alt="">
-      <img class="h-12" src="logo senoptma.jpeg" alt="">
-      <img class="h-12" src="logo ndoudeulma.jpeg" alt="">
+    <!-- CONTAINER ANIMATION -->
+    <div class="mt-10 overflow-hidden">
 
-      <!-- DUPLICATION -->
-      <img class="h-12" src="logopharmacie.jpeg" alt="">
-      <img class="h-12" src="logo orbit.jpeg" alt="">
-      <img class="h-12" src="logo senoptma.jpeg" alt="">
-      <img class="h-12" src="logo ndoudeulma.jpeg" alt="">
+      <div class="flex gap-10 animate-scroll w-max hover:[animation-play-state:paused]">
+
+        <!-- LOGOS -->
+        <img class="h-12" src="logopharmacie.jpeg" alt="">
+        <img class="h-12" src="logo orbit.jpeg" alt="">
+        <img class="h-12" src="logo senoptma.jpeg" alt="">
+        <img class="h-12" src="logo ndoudeulma.jpeg" alt="">
+
+        <!-- DUPLICATION -->
+        <img class="h-12" src="logopharmacie.jpeg" alt="">
+        <img class="h-12" src="logo orbit.jpeg" alt="">
+        <img class="h-12" src="logo senoptma.jpeg" alt="">
+        <img class="h-12" src="logo ndoudeulma.jpeg" alt="">
+
+      </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
-
-
-<!-- CONFIG TAILWIND -->
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      animation: {
-        scroll: "scroll 35s linear infinite",
-      },
-      keyframes: {
-        scroll: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
+  <!-- CONFIG TAILWIND -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            scroll: "scroll 35s linear infinite",
+          },
+          keyframes: {
+            scroll: {
+              "0%": { transform: "translateX(0)" },
+              "100%": { transform: "translateX(-50%)" },
+            },
+          },
         },
       },
-    },
-  },
-};
-</script>
+    };
+  </script>
 
-<section class="bg-whit py-16 px-6 md:px-20">
-  
-  <!-- Titre -->
-  <div class="text-center mb-12">
-    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-      Pourquoi choisir <span class="text-blue-600">K LINK</span> ?
-    </h2>
-    <p class="text-gray-500 mt-3">
-      Une solution moderne, rapide et sécurisée pour partager vos informations.
-    </p>
-  </div>
+  <section class="bg-white py-16 px-6 md:px-20">
 
-  <!-- Cards -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-    <!-- Rapide -->
-    <div class="bg-gray-50 border-2 py-4 px-6 rounded-2xl shadow-sm hover:shadow-md transition">
-      <div class="text-blue-600 text-3xl mb-4"></div>
-      <h3 class="text-xl font-semibold text-gray-900 mb-2">Rapide</h3>
-      <p class="text-gray-600 text-sm">
-        Partagez vos informations en un seul geste grâce à la technologie NFC.
-      </p>
-    </div>
-
-    <!-- Sécurisé -->
-    <div class="bg-gray-50 border-2 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-      <div class="text-blue-600 text-3xl mb-4"></div>
-      <h3 class="text-xl font-semibold text-gray-900 mb-2">Sécurisé</h3>
-      <p class="text-gray-600 text-sm">
-        Vos données restent protégées et contrôlées selon vos paramètres.
-      </p>
-    </div>
-
-    <!-- Moderne -->
-    <div class="bg-gray-50 border-2 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-      <div class="text-blue-600 text-3xl mb-4"></div>
-      <h3 class="text-xl font-semibold text-gray-900 mb-2">Moderne</h3>
-      <p class="text-gray-700 text-sm">
-        Une solution digitale innovante adaptée aux besoins actuels.
-      </p>
-    </div>
-
-    <!-- Facile -->
-    <div class="bg-gray-50 border-2 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-      <div class="text-blue-600 text-3xl mb-4"></div>
-      <h3 class="text-xl font-semibold text-gray-900 mb-2">Facile à utiliser</h3>
-      <p class="text-gray-600 text-sm">
-        Aucun effort technique, tout fonctionne en un clic ou un scan.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-<section id="offres" class="max-w-7xl  mx-auto px-6 py-16">
-  
-  <!-- TITRE -->
-  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
-    NOS <span class="text-blue-700">OFFRES</span>
-  </h2>
-
-  <!-- GRID -->
-  <div class="grid place-items-center gap-8 md:grid-cols-2 lg:grid-cols-2 ">
-
-    <!-- CARD 1 -->
-    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
-      
-      <div class="bg-gray-200 p-6 flex justify-center">
-        <img src="ccarteklink.jpeg" class="h-30 w-full object-contain rounded-2xl" />
-      </div>
-
-      <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2 text-blue-800"><b>K-LINK</b></h3>
-
-        <p class="text-black mb-6"> <b>K LINK est une carte NFC moderne qui vous permet de partager vos informations instantanément, facilement et sans contact</b>
-     
-        </p>
-<a href="produits.html">
-        <button  class="w-full bg-blue-500 text-white py-3 rounded-full flex items-center justify-center gap-2 hover:bg-black transition">
-          <b> Commander</b> <span"><img class="h-6 w-5 mt-1 ml-6 " src="fleche-droite (1).png" alt=""></span>
-        </button>
-        </a>
-      </div>
-    </div>
-
-    <!-- CARD 2 -->
-    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
-      
-      <div class="bg-gray-200 p-6 flex justify-center">
-       <img src="offreqr.jpeg" class="h-30 w-full object-contain rounded-2xl" />
-      </div>
-
-      <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2 text-blue-800"><b>K-PROTECT</b></h3>
-
-        <p class="text-black mb-6"> <b>K PROTECT est une solution intelligente avec QR code qui vous permet de retrouver et sécuriser vos objets en cas de perte</b>
-          
-        </p>
-
-       <a href="produits.html#commande">
-        <button
-   class="w-full bg-blue-500 text-white py-3 rounded-full flex items-center justify-center gap-2 hover:bg-black transition">
-
-  <b>Commander</b>
-</a>
- 
-
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="bg-white py-16 px-6 md:px-20">
-
-  <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
-
-    
-
-    <!-- TEXT CONTENT -->
-    <div>
-
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-        Comment ça marche ?
+    <!-- Titre -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+        Pourquoi choisir <span class="text-blue-600">K LINK</span> ?
       </h2>
-
-      <p class="text-black mb-8">
-        Simple, rapide et efficace. En 3 étapes seulement, votre carte K LINK est prête à l’utilisation.
+      <p class="text-gray-500 mt-3">
+        Une solution moderne, rapide et sécurisée pour partager vos informations.
       </p>
+    </div>
 
-      <!-- STEPS -->
-      <div class="space-y-6">
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-        <!-- Step 1 -->
-        <div class="flex gap-4">
-          <div class="text-blue-600 font-bold text-xl"> <span class="bg-blue-700 w-8 h-8 rounded-full flex items-center justify-center text-white">1</span></div>
-          <div>
-            <h3 class="font-semibold text-gray-900">Vous commandez votre carte</h3>
-            <p class="text-gray-600 text-sm">
-              Vous choisissez votre modèle K LINK et passez votre commande.
-            </p>
-          </div>
+      <!-- Rapide -->
+      <div class="bg-gray-50 border-2 py-4 px-6 rounded-2xl shadow-sm hover:shadow-md transition">
+        <div class="text-blue-600 text-3xl mb-4"></div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Rapide</h3>
+        <p class="text-gray-600 text-sm">
+          Partagez vos informations en un seul geste grâce à la technologie NFC.
+        </p>
+      </div>
+
+      <!-- Sécurisé -->
+      <div class="bg-gray-50 border-2 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+        <div class="text-blue-600 text-3xl mb-4"></div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Sécurisé</h3>
+        <p class="text-gray-600 text-sm">
+          Vos données restent protégées et contrôlées selon vos paramètres.
+        </p>
+      </div>
+
+      <!-- Moderne -->
+      <div class="bg-gray-50 border-2 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+        <div class="text-blue-600 text-3xl mb-4"></div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Moderne</h3>
+        <p class="text-gray-700 text-sm">
+          Une solution digitale innovante adaptée aux besoins actuels.
+        </p>
+      </div>
+
+      <!-- Facile -->
+      <div class="bg-gray-50 border-2 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+        <div class="text-blue-600 text-3xl mb-4"></div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Facile à utiliser</h3>
+        <p class="text-gray-600 text-sm">
+          Aucun effort technique, tout fonctionne en un clic ou un scan.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="offres" class="max-w-7xl mx-auto px-6 py-16">
+
+    <!-- TITRE -->
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
+      NOS <span class="text-blue-700">OFFRES</span>
+    </h2>
+
+    <!-- GRID -->
+    <div class="grid place-items-center gap-8 md:grid-cols-2 lg:grid-cols-2">
+
+      <!-- CARD 1 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
+
+        <div class="bg-gray-200 p-6 flex justify-center">
+          <img src="ccarteklink.jpeg" class="h-30 w-full object-contain rounded-2xl">
         </div>
 
-        <!-- Step 2 -->
-        <div class="flex gap-4">
-          <div class="text-blue-600 font-bold text-xl"> <span class="bg-blue-700 w-8 h-8 rounded-full flex items-center justify-center text-white">2</span></div>
-          <div>
-            <h3 class="font-semibold text-gray-900">Nous configurons et livrons</h3>
-            <p class="text-gray-600 text-sm">
-              Nous collectons vos informations, configurons votre carte et vous la livrons prête à l’usage.
-            </p>
-          </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-blue-800"><b>K-LINK</b></h3>
+
+          <p class="text-black mb-6"> <b>K LINK est une carte NFC moderne qui vous permet de partager vos informations
+              instantanément, facilement et sans contact</b>
+
+          </p>
+          <a href="produits.html">
+            <button
+              class="w-full bg-blue-500 text-white py-3 rounded-full flex items-center justify-center gap-2 hover:bg-black transition">
+              <b> Commander</b>
+              <span"><img class="h-6 w-5 mt-1 ml-6" src="fleche-droite (1).png" alt=""></span>
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
+
+        <div class="bg-gray-200 p-6 flex justify-center">
+          <img src="offreqr.jpeg" class="h-30 w-full object-contain rounded-2xl">
         </div>
 
-        <!-- Step 3 -->
-        <div class="flex gap-4">
-          <div class="text-blue-600 font-bold text-xl"> <span class="bg-blue-700 w-8 h-8 rounded-full flex items-center justify-center text-white">3</span></div>
-          <div>
-            <h3 class="font-semibold text-gray-900">Partage en un seul geste</h3>
-            <p class="text-gray-600 text-sm">
-              Approchez votre carte ou scannez le QR code pour partager vos informations instantanément.
-            </p>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-blue-800"><b>K-PROTECT</b></h3>
+
+          <p class="text-black mb-6"> <b>K PROTECT est une solution intelligente avec QR code qui vous permet de
+              retrouver et sécuriser vos objets en cas de perte</b>
+
+          </p>
+
+          <a href="produits.html#commande">
+            <button
+              class="w-full bg-blue-500 text-white py-3 rounded-full flex items-center justify-center gap-2 hover:bg-black transition">
+              <b>Commander</b>
+            </button>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-white py-16 px-6 md:px-20">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+
+      <!-- TEXT CONTENT -->
+      <div>
+
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Comment ça marche ?
+        </h2>
+
+        <p class="text-black mb-8">
+          Simple, rapide et efficace. En 3 étapes seulement, votre carte K LINK est prête à l'utilisation.
+        </p>
+
+        <!-- STEPS -->
+        <div class="space-y-6">
+
+          <!-- Step 1 -->
+          <div class="flex gap-4">
+            <div class="text-blue-600 font-bold text-xl"> <span
+                class="bg-blue-700 w-8 h-8 rounded-full flex items-center justify-center text-white">1</span></div>
+            <div>
+              <h3 class="font-semibold text-gray-900">Vous commandez votre carte</h3>
+              <p class="text-gray-600 text-sm">
+                Vous choisissez votre modèle K LINK et passez votre commande.
+              </p>
+            </div>
           </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-4">
+            <div class="text-blue-600 font-bold text-xl"> <span
+                class="bg-blue-700 w-8 h-8 rounded-full flex items-center justify-center text-white">2</span></div>
+            <div>
+              <h3 class="font-semibold text-gray-900">Nous configurons et livrons</h3>
+              <p class="text-gray-600 text-sm">
+                Nous collectons vos informations, configurons votre carte et vous la livrons prête à l'usage.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex gap-4">
+            <div class="text-blue-600 font-bold text-xl"> <span
+                class="bg-blue-700 w-8 h-8 rounded-full flex items-center justify-center text-white">3</span></div>
+            <div>
+              <h3 class="font-semibold text-gray-900">Partage en un seul geste</h3>
+              <p class="text-gray-600 text-sm">
+                Approchez votre carte ou scannez le QR code pour partager vos informations instantanément.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BUTTON -->
+        <div class="mt-8">
+          <a href="produits.html"
+            class="inline-block bg-blue-700 text-white px-6 py-3 rounded-3xl font-semibold hover:bg-blue-700 transition">
+            Commander ma k-link
+          </a>
         </div>
 
       </div>
 
-      <!-- BUTTON -->
-      <div class="mt-8">
-        <a href="produits.html" 
-           class="inline-block bg-blue-700 text-white px-6 py-3 rounded-3xl font-semibold hover:bg-blue-700 transition">
-          Commander ma k-link
+      <!-- IMAGE -->
+      <div class="flex justify-center rounded-2xl shadow-lg p-4">
+        <img src="imagecooment ça marche.png" alt="K LINK illustration"
+          class="rounded-2xl shadow-lg w-full max-w-md border-blue-400 border-2">
+      </div>
+
+    </div>
+
+  </section>
+
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto gap-8 mt-12 p-6 m-6 shadow-lg shadow-blue-500/20 hover:shadow-2xl hover:shadow-blue-500/40 transition duration-300">
+
+    <img src="GALERIE.jpeg"
+      class="rounded-2xl border-blue-700 border-2 shadow-md object-cover w-full h-48 sm:h-56 md:h-60 mx-auto" alt="">
+    <img src="cartepharmacie.jpeg"
+      class="rounded-2xl shadow-md object-cover w-full h-48 sm:h-56 md:h-60 mx-auto border-blue-700 border-2" alt="">
+    <img src="cartendougeuel.jpeg"
+      class="rounded-2xl shadow-md object-cover w-full h-48 sm:h-56 md:h-60 mx-auto border-blue-700 border-2" alt="">
+    <img src="cartesenop.jpeg"
+      class="rounded-2xl shadow-md object-cover w-full h-48 sm:h-56 md:h-60 mx-auto border-blue-700 border-2" alt="">
+    <img src="femmear.jpeg"
+      class="rounded-2xl shadow-md object-cover w-full h-48 sm:h-56 md:h-60 mx-auto border-blue-700 border-2" alt="">
+    <img src="carteqr.jpeg"
+      class="rounded-2xl shadow-md object-cover w-full h-48 sm:h-56 md:h-60 mx-auto border-blue-700 border-2" alt="">
+    <img src="cartkkklink.jpeg"
+      class="rounded-2xl shadow-md object-cover w-full h-48 sm:h-56 md:h-60 mx-auto border-blue-700 border-2" alt="">
+    <img src="kk.png"
+      class="rounded-2xl shadow-md object-cover w-full h-48 sm:h-56 md:h-60 mx-auto border-blue-700 border-2" alt="">
+  </div>
+
+  
+
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 px-6 md:px-20">
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+      <!-- BRAND -->
+      <div>
+        <h2 class="text-white text-2xl font-bold">K LINK</h2>
+        <p class="mt-4 text-sm text-gray-400">
+          Solutions digitales modernes pour partager, sécuriser et connecter vos informations en un seul geste.
+        </p>
+      </div>
+
+      <!-- LIENS -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Navigation</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white transition">Accueil</a></li>
+          <li><a href="#" class="hover:text-white transition">Nos solutions</a></li>
+          <li><a href="#" class="hover:text-white transition">Comment ça marche</a></li>
+          <li><a href="#" class="hover:text-white transition">À propos</a></li>
+        </ul>
+      </div>
+
+      <!-- SERVICES -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Nos solutions</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white transition">K LINK NFC</a></li>
+          <li><a href="#" class="hover:text-white transition">K PROTECT</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div id="contact">
+        <h3 class="text-white font-semibold mb-4">Contact</h3>
+        <p class="text-sm">🪧Sénégal</p>
+        <p class="text-sm mt-2">📱WhatsApp : +221 77 947 88 24</p>
+        <p class="text-sm mt-2"> 📩klink0sn@gmail.com</p>
+
+        <!-- CTA -->
+        <a href="https://wa.me/221779478824?text=Bonjour%20je%20veux%20commander%20une%20carte%20k-link"
+          target="_blank">
+          <img class="w-8 mt-5 transition transform hover:scale-110 duration-300" src="whatsapp.png" alt="WhatsApp">
         </a>
+
       </div>
 
     </div>
 
-    <!-- IMAGE -->
-    <div class="flex justify-center  rounded-2xl shadow-lg p-4">
-      <img 
-        src="imagecooment ça marche.png" 
-        alt="K LINK illustration"
-        class="rounded-2xl shadow-lg w-96 max-w-md border-blue-400 border-2"
-      />
+    <!-- BOTTOM BAR -->
+    <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
+      © 2026 K LINK. Tous droits réservés.
     </div>
 
-  </div>
-
-</section>
-
- <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 mx-auto  gap-8 mt-12 p-10 m-6 shadow-lg shadow-blue-500/20 hover:shadow-2xl hover:shadow-blue-500/40 transition duration-300">
-    
-    <img src="GALERIE.jpeg" class="rounded-2xl border-blue-700 border-2 shadow-md object-cover w-96 h-60 mx-auto" alt="">
-    <img src="cartepharmacie.jpeg" class="rounded-2xl shadow-md object-cover w-96 h-60 mx-auto border-blue-700 border-2 " alt="">
-    <img src="cartendougeuel.jpeg" class="rounded-2xl shadow-md object-cover w-96 h-60 mx-auto border-blue-700 border-2 " alt="">
-    <img src="cartesenop.jpeg" class="rounded-2xl shadow-md object-cover w-96 h-60 mx-auto border-blue-700 border-2 " alt="">
-    <img src="femmear.jpeg" class="rounded-2xl shadow-md object-cover w-96 h-60 mx-auto border-blue-700 border-2 " alt="">
-    <img src="carteqr.jpeg" class="rounded-2xl shadow-md object-cover w-96 h-60 mx-auto border-blue-700 border-2 " alt="">
-    <img src="cartkkklink.jpeg" class="rounded-2xl shadow-md object-cover w-96 h-60 mx-auto border-blue-700 border-2 " alt="">
-    <img src="kk.png" class="rounded-2xl shadow-md object-cover w-96 h-60 mx-auto border-blue-700 border-2 " alt="">
-  </div>
-
-<footer class="bg-gray-900 text-gray-300 pt-16 pb-8 px-6 md:px-20">
-
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-
-    <!-- BRAND -->
-    <div>
-      <h2 class="text-white text-2xl font-bold">K LINK</h2>
-      <p class="mt-4 text-sm text-gray-400">
-        Solutions digitales modernes pour partager, sécuriser et connecter vos informations en un seul geste.
-      </p>
-    </div>
-
-    <!-- LIENS -->
-    <div>
-      <h3 class="text-white font-semibold mb-4">Navigation</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-white transition">Accueil</a></li>
-        <li><a href="#" class="hover:text-white transition">Nos solutions</a></li>
-        <li><a href="#" class="hover:text-white transition">Comment ça marche</a></li>
-        <li><a href="#" class="hover:text-white transition">À propos</a></li>
-      </ul>
-    </div>
-
-    <!-- SERVICES -->
-    <div>
-      <h3 class="text-white font-semibold mb-4">Nos solutions</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-white transition">K LINK NFC</a></li>
-        <li><a href="#" class="hover:text-white transition">K PROTECT</a></li>
-      </ul>
-    </div>
-
-    <!-- CONTACT -->
-    <div id="contact">
-      <h3 class="text-white font-semibold mb-4">Contact</h3>
-      <p class="text-sm">🪧Sénégal</p>
-      <p class="text-sm mt-2">📱WhatsApp : +221 77 947 88 24</p>
-      <p class="text-sm mt-2"> 📩klink0sn@gmail.com</p>
-
-      <!-- CTA -->
-    <a href="https://wa.me/221779478824?text=Bonjour%20je%20veux%20commander%20une%20carte%20k-link" target="_blank">
-  <img 
-    class="w-8 mt-5 transition transform hover:scale-110 duration-300" 
-    src="whatsapp.png" 
-    alt="WhatsApp"
-  >
-</a>
-   
-    </div>
-
-  </div>
-
-  <!-- BOTTOM BAR -->
-  <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
-    © 2026 K LINK. Tous droits réservés.
-  </div>
-
-</footer>
+  </footer>
 
 </body>
-</html>
 
-</body>
 </html>
